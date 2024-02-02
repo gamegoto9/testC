@@ -1,4 +1,5 @@
 D:\API\DotnetAPI\publish\DotnetAPI.exe
+D:\API\DotnetAPI\publish\publish\publish\web.config
 D:\API\DotnetAPI\publish\publish\web.config
 D:\API\DotnetAPI\publish\appsettings.Development.json
 D:\API\DotnetAPI\publish\appsettings.json
@@ -6,6 +7,10 @@ D:\API\DotnetAPI\publish\publish\appsettings.Development.json
 D:\API\DotnetAPI\publish\publish\appsettings.json
 D:\API\DotnetAPI\publish\publish\DotnetAPI.deps.json
 D:\API\DotnetAPI\publish\publish\DotnetAPI.runtimeconfig.json
+D:\API\DotnetAPI\publish\publish\publish\appsettings.Development.json
+D:\API\DotnetAPI\publish\publish\publish\appsettings.json
+D:\API\DotnetAPI\publish\publish\publish\DotnetAPI.deps.json
+D:\API\DotnetAPI\publish\publish\publish\DotnetAPI.runtimeconfig.json
 D:\API\DotnetAPI\publish\DotnetAPI.dll
 D:\API\DotnetAPI\publish\DotnetAPI.deps.json
 D:\API\DotnetAPI\publish\DotnetAPI.runtimeconfig.json
