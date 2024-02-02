@@ -152,3 +152,14 @@ D:\API\DotnetAPI\bin\Debug\net8.0\publish\appsettings.json
 D:\API\DotnetAPI\bin\Debug\net8.0\publish\DotnetAPI.deps.json
 D:\API\DotnetAPI\bin\Debug\net8.0\publish\DotnetAPI.runtimeconfig.json
 D:\API\DotnetAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\API\DotnetAPI\bin\Debug\net8.0\publish\publish\publish\web.config
+D:\API\DotnetAPI\bin\Debug\net8.0\publish\publish\web.config
+D:\API\DotnetAPI\bin\Debug\net8.0\publish\publish\appsettings.Development.json
+D:\API\DotnetAPI\bin\Debug\net8.0\publish\publish\appsettings.json
+D:\API\DotnetAPI\bin\Debug\net8.0\publish\publish\DotnetAPI.deps.json
+D:\API\DotnetAPI\bin\Debug\net8.0\publish\publish\DotnetAPI.runtimeconfig.json
+D:\API\DotnetAPI\bin\Debug\net8.0\publish\publish\publish\appsettings.Development.json
+D:\API\DotnetAPI\bin\Debug\net8.0\publish\publish\publish\appsettings.json
+D:\API\DotnetAPI\bin\Debug\net8.0\publish\publish\publish\DotnetAPI.deps.json
+D:\API\DotnetAPI\bin\Debug\net8.0\publish\publish\publish\DotnetAPI.runtimeconfig.json
+D:\API\DotnetAPI\obj\Debug\net8.0\DotnetAPI.sourcelink.json
