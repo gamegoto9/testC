@@ -1,0 +1,559 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "DotnetAPI",
+    "version": "1.0"
+  },
+  "paths": {
+    "/Cars/TestConnection": {
+      "get": {
+        "tags": [
+          "Cars"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Cars/Conds": {
+      "get": {
+        "tags": [
+          "Cars"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CondItem"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CondItem"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CondItem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Cars/home": {
+      "get": {
+        "tags": [
+          "Cars"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/HomeItem"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HomeItem"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HomeItem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Cars/search": {
+      "post": {
+        "tags": [
+          "Cars"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Cars/CarDet": {
+      "post": {
+        "tags": [
+          "Cars"
+        ],
+        "parameters": [
+          {
+            "name": "Cid",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CarStatItem": {
+        "type": "object",
+        "properties": {
+          "overlayIcon": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CarWidgetHome": {
+        "type": "object",
+        "properties": {
+          "cID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "previewImage300": {
+            "type": "string",
+            "nullable": true
+          },
+          "displayName": {
+            "type": "string",
+            "nullable": true
+          },
+          "displayPrice": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CondItem": {
+        "type": "object",
+        "properties": {
+          "makes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LMakeItem"
+            },
+            "nullable": true
+          },
+          "inputProvinceList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LidNameItem"
+            },
+            "nullable": true
+          },
+          "inputCarTypeList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LidNameItem"
+            },
+            "nullable": true
+          },
+          "inputYearList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LidNameItem"
+            },
+            "nullable": true
+          },
+          "inputPriceList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LidNameItem"
+            },
+            "nullable": true
+          },
+          "inputInstallmentPriceList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LidNameItem"
+            },
+            "nullable": true
+          },
+          "inputInstallmentPeriodList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LidNameItem"
+            },
+            "nullable": true
+          },
+          "inputGears": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LIDNameItem"
+            },
+            "nullable": true
+          },
+          "inputGasList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LIDNameItem"
+            },
+            "nullable": true
+          },
+          "inputColorList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LidNameItem"
+            },
+            "nullable": true
+          },
+          "inputSortList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LIDNameItem"
+            },
+            "nullable": true
+          },
+          "carStatuses": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/CarStatItem"
+            },
+            "nullable": true
+          },
+          "dataSrc": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HomeItem": {
+        "type": "object",
+        "properties": {
+          "carCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "newCarCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "carListDisplayName": {
+            "type": "string",
+            "nullable": true
+          },
+          "widgetPreviewNew": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CarWidgetHome"
+            },
+            "nullable": true
+          },
+          "widgetMarketOverviewNew": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MakeListItem"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LBodyItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "disp": {
+            "type": "string",
+            "nullable": true
+          },
+          "trimIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LIDNameItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "displayName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LMakeItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "disp": {
+            "type": "string",
+            "nullable": true
+          },
+          "isHot": {
+            "type": "boolean"
+          },
+          "models": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LModelItem"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LModelItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "disp": {
+            "type": "string",
+            "nullable": true
+          },
+          "isHot": {
+            "type": "boolean"
+          },
+          "bodys": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LBodyItem"
+            },
+            "nullable": true
+          },
+          "trims": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LTrimItem"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LTrimItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "disp": {
+            "type": "string",
+            "nullable": true
+          },
+          "bodyIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LidNameItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "displayName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MakeListItem": {
+        "type": "object",
+        "properties": {
+          "mkID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "displayName": {
+            "type": "string",
+            "nullable": true
+          },
+          "makeImage": {
+            "type": "string",
+            "nullable": true
+          },
+          "carCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "carChangeCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SearchDto": {
+        "type": "object",
+        "properties": {
+          "fno": {
+            "type": "string",
+            "default": "all",
+            "nullable": true
+          },
+          "mkID": {
+            "type": "string",
+            "default": "0",
+            "nullable": true
+          },
+          "mdID": {
+            "type": "string",
+            "default": "0",
+            "nullable": true
+          },
+          "bdID": {
+            "type": "string",
+            "default": "0",
+            "nullable": true
+          },
+          "taID": {
+            "type": "string",
+            "default": "0",
+            "nullable": true
+          },
+          "bt1": {
+            "type": "string",
+            "default": "0",
+            "nullable": true
+          },
+          "bt2": {
+            "type": "string",
+            "default": "0",
+            "nullable": true
+          },
+          "yr1": {
+            "type": "string",
+            "default": "0",
+            "nullable": true
+          },
+          "yr2": {
+            "type": "string",
+            "default": "0",
+            "nullable": true
+          },
+          "tys": {
+            "type": "string",
+            "default": "0",
+            "nullable": true
+          },
+          "dpmt": {
+            "type": "string",
+            "default": "0",
+            "nullable": true
+          },
+          "isDpmt": {
+            "type": "string",
+            "default": "N",
+            "nullable": true
+          },
+          "gr": {
+            "type": "string",
+            "default": "b",
+            "nullable": true
+          },
+          "gs": {
+            "type": "string",
+            "default": "n",
+            "nullable": true
+          },
+          "cl": {
+            "type": "string",
+            "default": "0",
+            "nullable": true
+          },
+          "jv": {
+            "type": "string",
+            "default": "0",
+            "nullable": true
+          },
+          "sort": {
+            "type": "string",
+            "default": "y",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
